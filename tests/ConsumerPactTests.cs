@@ -106,7 +106,7 @@ namespace tests
                 .WithRequest(HttpMethod.Get, "/Products/10")
                 .WillRespond()
                 .WithStatus(System.Net.HttpStatusCode.NotFound)
-                .WithHeader("Content-Type", "application/json")
+                .WithHeader("Content-Type", "application/json");
      
 
             //Act
