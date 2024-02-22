@@ -105,7 +105,7 @@ namespace tests
                 .UponReceiving("a request to retrieve a product id that does not exist")
                 .WithRequest(HttpMethod.Get, "/Products/10")
                 .WillRespond()
-                .WithStatus(System.Net.HttpStatusCode.NotFound)
+                .WithStatus(System.Net.HttpStatusCode.NotAcceptable)
                 .WithHeader("Content-Type", "application/json");
      
 
