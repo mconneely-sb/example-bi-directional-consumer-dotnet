@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 
 env:
-  PACT_BROKER_BASE_URL: https://mconneely-sb.pactflow.io
+  PACT_BROKER_BASE_URL: https://apih_mc24.pactflow.io
   PACT_BROKER_TOKEN: ${{ secrets.PACTFLOW_TOKEN_FOR_CI_CD_WORKSHOP }}
   PACT_BROKER_PUBLISH_VERIFICATION_RESULTS: true
   GIT_COMMIT: ${{ github.sha }}
@@ -23,8 +23,8 @@ jobs:
             # "pactflow-example-bi-directional-provider-dredd",
             # "pactflow-example-bi-directional-provider-restassured",
             # "pactflow-example-bi-directional-provider-postman",
-             "podium-provider-payee",
-            #'pactflow-example-bi-directional-provider-dotnet'
+            # "podium-provider-payee",
+            'pactflow-example-bi-directional-provider-dotnet'
           ]
     steps:
       - uses: actions/checkout@v3
