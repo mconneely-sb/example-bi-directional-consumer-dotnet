@@ -48,7 +48,7 @@ namespace tests
                 .WithRequest(HttpMethod.Get, "/Products")
                 .WillRespond()
                 .WithStatus(System.Net.HttpStatusCode.OK)
-                .WithHeader("Content-Type", "application/json; charset=utf-8")
+                .WithHeader("Content-Type", "application/json")
                 .WithJsonBody(Match.MinType(new
                 {
                     id = 27,
@@ -107,7 +107,7 @@ namespace tests
                 .WithRequest(HttpMethod.Get, "/Products/10")
                 .WillRespond()
                 .WithStatus(System.Net.HttpStatusCode.NotFound)
-                .WithHeader("Content-Type", "application/json; charset=utf-8");
+                .WithHeader("Content-Type", "application/json");
      
 
             //Act
