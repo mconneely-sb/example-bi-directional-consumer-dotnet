@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 
 env:
-  PACT_BROKER_BASE_URL: https://testdemo.pactflow.io
+  PACT_BROKER_BASE_URL: https://mconneely.pactflow.io
   PACT_BROKER_TOKEN: ${{ secrets.PACTFLOW_TOKEN_FOR_CI_CD_WORKSHOP }}
   PACT_BROKER_PUBLISH_VERIFICATION_RESULTS: true
   GIT_COMMIT: ${{ github.sha }}
@@ -24,7 +24,8 @@ jobs:
             # "pactflow-example-bi-directional-provider-restassured",
             # "pactflow-example-bi-directional-provider-postman",
             # "pactflow-example-provider",
-            'pactflow-example-bi-directional-provider-dotnet'
+            #'pactflow-example-bi-directional-provider-dotnet'
+            pactflow-example-bi-directional-provider-readyapi
           ]
     steps:
       - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5
